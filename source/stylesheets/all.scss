@@ -9,3 +9,89 @@ body {
   text-align: center;
   /*font-family: sans-serif; */
 }
+$iphone-large-width: 250px;
+$iphone-large-base-width: 386px;
+$iphone-large-base-height: 597px;
+$iphone-large-base-screen-width: 232px;
+$iphone-large-base-screen-height: 345px;
+$iphone-large-base-screen-left: 82px;
+$iphone-large-base-screen-top: 95px;
+$iphone-large-base-screen-border-radius: 3px;
+$iphone-large-ratio: $iphone-large-width / $iphone-large-base-width;
+
+@mixin mockup($width,
+              $base-width, $base-height,
+              $base-screen-width, $base-screen-height,
+              $base-screen-left, $base-screen-top,
+              $base-screen-border-radius) {
+  $ratio: $width / $base-width;
+  width: $width;
+  height: $base-height * $ratio;
+  position: relative;
+  background-size: 100% !important;
+  > .screen {
+    background: green;
+    position: absolute;
+    left: $base-screen-left * $ratio;
+    top: $base-screen-top * $ratio;
+    width: $base-screen-width * $ratio;
+    height: $base-screen-height * $ratio;
+    border-radius: $base-screen-border-radius * $ratio;
+  }
+}
+.iphone-large {
+  @include mockup($iphone-large-width,
+    $iphone-large-base-width, $iphone-large-base-height,
+    $iphone-large-base-screen-width, $iphone-large-base-screen-height,
+    $iphone-large-base-screen-left, $iphone-large-base-screen-top,
+    $iphone-large-base-screen-border-radius);
+
+  &.black {
+    background: url("../images/mobiles/iphone-black-front.png");
+  }
+  &.white {
+    background: url("../images/mobiles/iphone-white-front.png");
+  }
+}
+
+@mixin transform-rotate($angle) {
+  -webkit-transform: rotate($angle);
+  -moz-transform: rotate($angle);
+  -o-transform: rotate($angle);
+  -ms-transform: rotate($angle);
+  transform: rotate($angle);
+}
+
+.ipad {
+  @include mockup(621px,
+    621px, 639px,
+    353px, 470px,
+    129px, 48px,
+    0);
+  &.black {
+    background: url("../images/mobiles/ipad-black.png");
+  }
+  &.white {
+    background: url("../images/mobiles/ipad-white.png");
+  }
+}
+.greenscreen {
+  $ipad-rotation: -9deg;
+  $iphone-rotation: 19deg;
+
+  text-align: left;
+  .ipad {
+    @include transform-rotate($ipad-rotation);
+  }
+  .iphone-large {
+    position: absolute;
+    bottom: 40px;
+    left: 70px;
+
+    @include transform-rotate($iphone-rotation);
+  }
+  .hero-unit {
+    background: none;
+  }
+}
+
