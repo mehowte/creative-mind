@@ -8,7 +8,7 @@ gem 'middleman-gh-pages'
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
 gem "bootstrap-sass", "~> 2.3.2.0", :require => false
-
+gem 'font-awesome-middleman'
 # For faster file watcher updates:
 # gem "wdm", "~> 0.1.0") # Windows
 
