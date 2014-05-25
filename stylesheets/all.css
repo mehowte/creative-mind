@@ -8925,7 +8925,7 @@ body {
   text-align: center;
   /*font-family: sans-serif; */ }
 
-/* line 43, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+/* line 48, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
 .iphone-large {
   width: 250px;
   height: 386.65803px;
@@ -8933,21 +8933,26 @@ body {
   background-size: 100% !important; }
   /* line 33, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
   .iphone-large > .screen {
-    background: green;
     position: absolute;
     left: 53.10881px;
     top: 61.5285px;
     width: 150.25907px;
     height: 223.4456px;
     border-radius: 1.94301px; }
-  /* line 50, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+    /* line 34, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+    .iphone-large > .screen.green {
+      background: #32cd32; }
+    /* line 37, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+    .iphone-large > .screen.blue {
+      background: #0080FF; }
+  /* line 55, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
   .iphone-large.black {
     background: url("../images/mobiles/iphone-black-front.png"); }
-  /* line 53, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+  /* line 58, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
   .iphone-large.white {
     background: url("../images/mobiles/iphone-white-front.png"); }
 
-/* line 66, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+/* line 71, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
 .ipad {
   width: 621px;
   height: 639px;
@@ -8955,32 +8960,37 @@ body {
   background-size: 100% !important; }
   /* line 33, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
   .ipad > .screen {
-    background: green;
     position: absolute;
     left: 129px;
     top: 48px;
     width: 353px;
     height: 470px;
     border-radius: 0; }
-  /* line 72, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+    /* line 34, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+    .ipad > .screen.green {
+      background: #32cd32; }
+    /* line 37, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+    .ipad > .screen.blue {
+      background: #0080FF; }
+  /* line 77, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
   .ipad.black {
     background: url("../images/mobiles/ipad-black.png"); }
-  /* line 75, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+  /* line 80, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
   .ipad.white {
     background: url("../images/mobiles/ipad-white.png"); }
 
-/* line 79, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
-.greenscreen {
+/* line 84, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+.greenscreen, .bluescreen {
   text-align: left; }
-  /* line 84, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
-  .greenscreen .ipad {
+  /* line 89, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+  .greenscreen .ipad, .bluescreen .ipad {
     -webkit-transform: rotate(-9deg);
     -moz-transform: rotate(-9deg);
     -o-transform: rotate(-9deg);
     -ms-transform: rotate(-9deg);
     transform: rotate(-9deg); }
-  /* line 87, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
-  .greenscreen .iphone-large {
+  /* line 92, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+  .greenscreen .iphone-large, .bluescreen .iphone-large {
     position: absolute;
     bottom: 40px;
     left: 70px;
@@ -8989,9 +8999,16 @@ body {
     -o-transform: rotate(19deg);
     -ms-transform: rotate(19deg);
     transform: rotate(19deg); }
-  /* line 94, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
-  .greenscreen .hero-unit {
+  /* line 99, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+  .greenscreen .hero-unit, .bluescreen .hero-unit {
     background: none; }
-  /* line 97, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
-  .greenscreen .icon-muted {
+  /* line 102, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+  .greenscreen .icon-muted, .bluescreen .icon-muted {
     color: #a2a2a2; }
+
+/* line 107, /Users/mehowte/code/private/creative-mind/source/stylesheets/all.scss */
+a.appstore-button {
+  width: 135px;
+  height: 40px;
+  display: block;
+  background: url("../images/app_store_button.png"); }
